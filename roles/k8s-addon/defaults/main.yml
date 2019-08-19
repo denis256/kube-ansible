@@ -68,6 +68,7 @@ addons:
       - logging/elasticsearch/elasticsearch-rbac.yml
       - logging/elasticsearch/elasticsearch-svc.yml
       - logging/elasticsearch/elasticsearch-sts.yml
+      - logging/elasticsearch/elasticsearch-curator.yaml
       - logging/fluentd/fluentd-sa.yml
       - logging/fluentd/fluentd-rbac.yml
       - logging/fluentd/fluentd-es-cm.yml

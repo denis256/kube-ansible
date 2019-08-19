@@ -13,3 +13,20 @@ spec:
     targetPort: db
   selector:
     k8s-app: elasticsearch-logging
+---
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: kube-system
+  name: elasticsearch-discovery
+  labels:
+    service: elasticsearch
+spec:
+  clusterIP: None
+  ports:
+  - port: 9200
+    name: serving
+  - port: 9300
+    name: node-to-node
+  selector:
+    k8s-app: elasticsearch-logging

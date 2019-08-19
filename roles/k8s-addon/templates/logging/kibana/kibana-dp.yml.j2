@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: kibana-logging
-        image: docker.elastic.co/kibana/kibana-oss:6.6.1
+        image: docker.elastic.co/kibana/kibana:6.6.2
         resources:
           limits:
             cpu: 1000m
@@ -29,8 +29,6 @@ spec:
         env:
           - name: ELASTICSEARCH_URL
             value: http://elasticsearch-logging:9200
-          - name: SERVER_BASEPATH
-            value: /api/v1/namespaces/kube-system/services/kibana-logging/proxy
         ports:
         - containerPort: 5601
           name: ui
